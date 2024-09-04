@@ -9,6 +9,7 @@
     <Description>Data models for use in tournament organizer applications. The project utilizes CommunityToolkit.Mvvm to make required properties observable.</Description>
     <PackageTags>tournament;model;mvvm</PackageTags>
     <RepositoryUrl>README.md</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
