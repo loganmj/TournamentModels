@@ -13,13 +13,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install GitVersion
-      run: dotnet tool install -g GitVersion.Tool
-
-    - name: Determine version
-      id: gitversion
-      run: ~/.dotnet/tools/gitversion /output json /showvariable FullSemVer
-
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
