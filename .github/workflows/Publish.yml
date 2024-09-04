@@ -25,8 +25,7 @@ jobs:
       run: dotnet build --configuration Release
 
     - name: Pack
-      run: dotnet pack --configuration Release /p:PackageVersion=${{ steps.gitversion.outputs.FullSemVer }}
-
+      run: dotnet pack --configuration Release
     - name: Publish
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
