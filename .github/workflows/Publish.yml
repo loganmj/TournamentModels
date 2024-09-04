@@ -30,4 +30,4 @@ jobs:
     - name: Publish
       env:
         NUGET_API_KEY: ${{ secrets.NUGET-API-KEY }}
-      run: dotnet nuget push TournamentModels/TournamentModels/bin/Release/*.nupkg --api-key $NUGET-API-KEY --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push TournamentModels/bin/Release/*.nupkg --api-key $NUGET-API-KEY --source https://api.nuget.org/v3/index.json
