@@ -13,6 +13,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9.7
+      with:
+        versionSpec: '5.x'
+
+    - name: Determine version
+      id: gitversion
+      run: gitversion /output json /showvariable FullSemVer
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
@@ -25,7 +34,7 @@ jobs:
       run: dotnet build --configuration Release
 
     - name: Pack
-      run: dotnet pack --configuration Release
+      run: dotnet pack --configuration Release /p:PackageVersion=${{ steps.gitversion.outputs.FullSemVer }}
 
     - name: Publish
       env:
