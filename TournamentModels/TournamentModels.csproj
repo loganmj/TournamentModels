@@ -4,6 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>TournamentModels</Title>
+    <Description>Data models for use in tournament organizer applications. The project utilizes CommunityToolkit.Mvvm to make required properties observable.</Description>
+    <PackageTags>tournament;model;mvvm</PackageTags>
+    <RepositoryUrl>README.md</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
